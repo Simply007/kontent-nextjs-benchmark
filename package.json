@@ -3,10 +3,11 @@
   "version": "0.0.1",
   "scripts": {
     "dev": "next",
-    "build": "next build",
+    "build": "next build | gnomon",
     "start": "next start",
     "export": "next export",
-    "benchmark": "node -e \"console.log(new Date())\" && next build && next export && node -e \"console.log(new Date())\""
+    "build-export": "next build && next export",
+    "benchmark":  "npm run build-export | gnomon"
   },
   "dependencies": {
     "@kentico/kontent-delivery": "^9.2.0",
@@ -19,6 +20,7 @@
     "rxjs": "^6.6.2"
   },
   "devDependencies": {
+    "gnomon": "^1.5.0",
     "postcss-preset-env": "^6.7.0"
   }
 }

@@ -1,27 +1,28 @@
-import Layout from '../components/layout'
-import { getAllPosts } from '../lib/api'
+import Layout from '../components/layout_1'
+import { getAllArticles } from '../lib/api'
+import Link from 'next/link'
 
 
-export default function Index({ allPosts, title }) {
+export default function Index({ articles, title }) {
 
-    return (
-      <Layout>
-        {data.site.siteMetadata.siteTitle}
-        <ul>
-          {allPosts.map(post => (
-            <li>
-              <Link to={article.slug.value}>{article.title.value}</Link>
-            </li>
-          ))}
-        </ul>
-      </Layout>
-    )
+  return (
+    <Layout>
+      {title}
+      <ul>
+        {articles.map(article => (
+          <li key={article.slug}>
+            <Link href={`./posts/${article.slug}`}><a>{article.title}</a></Link>
+          </li>
+        ))}
+      </ul>
+    </Layout>
+  )
 }
 
 export async function getStaticProps({ preview = false }) {
-  const allPosts = await getAllPosts(preview);
-  const title = "Next.js Kontent Benchmark"
+  const articles = await getAllArticles(preview);
+  const title = "Next.js Kontent Benchmark";
   return {
-    props: { allPosts, title },
+    props: { articles, title },
   }
 };

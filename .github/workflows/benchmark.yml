@@ -9,7 +9,7 @@ on:
       - created
 
 jobs:
-  build:
+  benchmark:
 
     runs-on: ubuntu-latest
 

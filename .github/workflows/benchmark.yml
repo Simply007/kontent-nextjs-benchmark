@@ -2,6 +2,11 @@
 # For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
 
 name: Benchmark
+env:
+  KONTENT_PROJECT_ID_512: ${{ secrets.KONTENT_PROJECT_ID_512 }}
+  KONTENT_PROJECT_ID_4096: ${{ secrets.KONTENT_PROJECT_ID_4096 }}
+  KONTENT_PROJECT_ID_8192: ${{ secrets.KONTENT_PROJECT_ID_8192 }}
+  KONTENT_PROJECT_ID_32768: ${{ secrets.KONTENT_PROJECT_ID_32768 }}
 
 on:
   release:

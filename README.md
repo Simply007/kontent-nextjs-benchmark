@@ -22,7 +22,7 @@ See [Github action logs](https://github.com/Simply007/kontent-nextjs-benchmark/a
 * 512 pages - 53s
 * 4096 pages - 278s (4.6m)
 * 8192 pages - 533s (8.8m)
-* 32768 pages - 
+* 32768 pages - 2576s (42.9m)
 
 ### On Vercel
 

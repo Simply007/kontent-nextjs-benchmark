@@ -77,7 +77,7 @@ The site is already configured to use predefined dataset of 512 pages in kentico
 1. Go to your Kontent project and publish all the imported items.
    > You could deactivate Management API key, it is not necessary any more.
 
-:Warning: If you want to generate bigger data sets, use [Kontent Data Generator](https://github.com/Simply007/kontent-data-generator).
+:warning: If you want to generate bigger data sets, use [Kontent Data Generator](https://github.com/Simply007/kontent-data-generator).
 
 ## Run the benchmark
 

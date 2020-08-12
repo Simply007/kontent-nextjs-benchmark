@@ -26,15 +26,15 @@ See [Github action logs](https://github.com/Simply007/kontent-nextjs-benchmark/a
 
 ### On Vercel
 
-There is only 8k dataset building at the time on [Vercel project](https://vercel.com/chrastinaondra/kontent-nextjs-benchmark)
-> but the output exceeds 16k files, so it is not deployed.
+There is only 4k and 8k dataset build on [Vercel project](https://vercel.com/chrastinaondra/kontent-nextjs-benchmark)
+
+> but the output for 8k items exceeds 16k files, so it is not deployed.
 
 ```plain
 Error: The result of your build (16,410 files) exceeds the maximum of 16,000 files. Learn More: https://vercel.link/max-files
 ```
 
-[Results of this run](https://vercel.com/chrastinaondra/kontent-nextjs-benchmark/gud33aquq)
-
+* 4096 pages - 216s (3.6m) [this run](https://vercel.com/chrastinaondra/kontent-nextjs-benchmark/q7l8n0qe8)
 * 8192 pages - 418s (6.9m) [this run](https://vercel.com/chrastinaondra/kontent-nextjs-benchmark/gud33aquq)
 
 ## Deploy your own

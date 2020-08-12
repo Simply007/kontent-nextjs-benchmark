@@ -8,12 +8,16 @@ Alternation of the [Gaatsby's willit.build benchmark](https://github.com/gatsbyj
 
 ### Locally
 
-> ran two time to ensure the content is on CDN
+> Ran two time to ensure the content is on CDN
 
 * 512 pages - cca 20s
 * 4096 pages - cca 90s (1,5m)
 * 8192 pages - cca 150s (2,5m)
 * 32768 pages - cca 1262s (21m)
+
+### On Github action
+
+See [Github action logs](https://github.com/Simply007/kontent-nextjs-benchmark/actions?query=workflow%3ABenchmark) for all results.
 
 ## Deploy your own
 

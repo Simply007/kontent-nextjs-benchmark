@@ -4,20 +4,38 @@ Alternation of the [Gaatsby's willit.build benchmark](https://github.com/gatsbyj
 
 ## Results
 
-// TODO
-
 ### Locally
 
 > Ran two time to ensure the content is on CDN
 
 * 512 pages - cca 20s
-* 4096 pages - cca 90s (1,5m)
-* 8192 pages - cca 150s (2,5m)
-* 32768 pages - cca 1262s (21m)
+* 4096 pages - cca 90s (1.5m)
+* 8192 pages - cca 150s (2.5m)
+* 32768 pages - cca 1260s (21m)
 
 ### On Github action
 
 See [Github action logs](https://github.com/Simply007/kontent-nextjs-benchmark/actions?query=workflow%3ABenchmark) for all results.
+
+[Results of this run](https://github.com/Simply007/kontent-nextjs-benchmark/runs/975272541?check_suite_focus=true)
+
+* 512 pages - 53s
+* 4096 pages - 278s (4.6m)
+* 8192 pages - 533s (8.8m)
+* 32768 pages - 
+
+### On Vercel
+
+There is only 8k dataset building at the time on [Vercel project](https://vercel.com/chrastinaondra/kontent-nextjs-benchmark)
+> but the output exceeds 16k files, so it is not deployed.
+
+```plain
+Error: The result of your build (16,410 files) exceeds the maximum of 16,000 files. Learn More: https://vercel.link/max-files
+```
+
+[Results of this run](https://vercel.com/chrastinaondra/kontent-nextjs-benchmark/gud33aquq)
+
+* 8192 pages - 418s (6.9m) [this run](https://vercel.com/chrastinaondra/kontent-nextjs-benchmark/gud33aquq)
 
 ## Deploy your own
 
@@ -90,6 +108,26 @@ yarn dev
 ```
 
 Your blog should be up and running on [http://localhost:3000](http://localhost:3000)! If it doesn't work, post on [GitHub discussions](https://github.com/vercel/next.js/discussions).
+
+## Run locally
+
+If you have set `KONTENT_PROJECT_ID`, the only thing you need to do is to run:
+
+```sh
+npm install # if you haven't install dependencies yet
+npm run build
+
+# or
+
+yarn # if you haven't install dependencies yet
+yarn build
+```
+
+The measurements will be visible in the log - the result is on the last line i.e.:
+
+```plain
+     Total   86.2187s
+```
 
 ## Deploy on Vercel
 

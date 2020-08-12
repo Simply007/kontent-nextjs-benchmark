@@ -7,7 +7,11 @@
     "start": "next start",
     "export": "next export",
     "build-export": "next build && next export",
-    "benchmark":  "npm run build-export | gnomon"
+    "benchmark": "npm run build-export | gnomon",
+    "benchmark-512": "cross-env NUM_PAGES=512 npm run build-export | gnomon",
+    "benchmark-4096": "cross-env NUM_PAGES=4096 npm run build-export | gnomon",
+    "benchmark-8192": "cross-env NUM_PAGES=8192 npm run build-export | gnomon",
+    "benchmark-32768": "cross-env NUM_PAGES=32768 npm run build-export | gnomon"
   },
   "dependencies": {
     "@kentico/kontent-delivery": "^9.2.0",
@@ -20,6 +24,7 @@
     "rxjs": "^6.6.2"
   },
   "devDependencies": {
+    "cross-env": "^7.0.2",
     "gnomon": "^1.5.0",
     "postcss-preset-env": "^6.7.0"
   }

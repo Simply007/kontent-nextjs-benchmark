@@ -2,9 +2,18 @@
 
 Alternation of the [Gaatsby's willit.build benchmark](https://github.com/gatsbyjs/gatsby/tree/master/benchmarks/source-kontent) for [Next.js](https://nextjs.org/) and [Kentico Kontent](https://kontent.ai) as a data source.
 
-## Demo
+## Results
 
 // TODO
+
+### Locally
+
+> ran two time to ensure the content is on CDN
+
+* 512 pages - cca 20s
+* 4096 pages - cca 90s (1,5m)
+* 8192 pages - cca 150s (2,5m)
+* 32768 pages - cca 1262s (21m)
 
 ## Deploy your own
 

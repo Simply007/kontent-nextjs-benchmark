@@ -1,6 +1,6 @@
 # Kontent and Next.js benchmark
 
-Alternation of the [Gaatsby's willit.build benchmark](https://github.com/gatsbyjs/gatsby/tree/master/benchmarks/source-kontent) for [Next.js](https://nextjs.org/) and [Kentico Kontent](https://kontent.ai) as a data source.
+Alternation of the [Gatsby's willit.build benchmark](https://github.com/gatsbyjs/gatsby/tree/master/benchmarks/source-kontent) for [Next.js](https://nextjs.org/) and [Kentico Kontent](https://kontent.ai) as a data source.
 
 ## Results
 

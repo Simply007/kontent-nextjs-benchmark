@@ -36,7 +36,8 @@ Error: The result of your build (16,410 files) exceeds the maximum of 16,000 fil
 
 * 512 pages - 13s [this run](https://vercel.com/chrastinaondra/kontent-nextjs-benchmark/3ubskjn1m)
 * 4096 pages - 45s [this run](https://vercel.com/chrastinaondra/kontent-nextjs-benchmark/24r34qghz)
-* 8192 pages - 107s (1.78) [this run](https://vercel.com/chrastinaondra/kontent-nextjs-benchmark/onsjyzknu)
+* 8192 pages - 107s (1.78m) [this run](https://vercel.com/chrastinaondra/kontent-nextjs-benchmark/onsjyzknu)
+* 32768 pages - 941s (15.7m) [this run](https://vercel.com/chrastinaondra/kontent-nextjs-benchmark/1zazvoq2s)
 
 ## Deploy your own
 

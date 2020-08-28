@@ -37,7 +37,8 @@ Error: The result of your build (16,410 files) exceeds the maximum of 16,000 fil
 * 512 pages - 13s [this run](https://vercel.com/chrastinaondra/kontent-nextjs-benchmark/3ubskjn1m)
 * 4096 pages - 45s [this run](https://vercel.com/chrastinaondra/kontent-nextjs-benchmark/24r34qghz)
 * 8192 pages - 107s (1.78m) [this run](https://vercel.com/chrastinaondra/kontent-nextjs-benchmark/onsjyzknu)
-* 32768 pages - 941s (15.7m) [this run](https://vercel.com/chrastinaondra/kontent-nextjs-benchmark/1zazvoq2s)
+* 32768 pages - 919s (15.3,) [this run](https://vercel.com/chrastinaondra/kontent-nextjs-benchmark/lc2g9z6dt)
+  * `23:56:41.736  	 372.1988s   info  - Generating static pages (32769/32770)` it looks like 404 takes 6.2mis - so 404 could save some time
 
 ## Deploy your own
 

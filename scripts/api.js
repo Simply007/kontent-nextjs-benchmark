@@ -1,10 +1,10 @@
-import { DeliveryClient } from '@kentico/kontent-delivery'
-import { name, version } from '../package.json'
+const { DeliveryClient } = require('@kentico/kontent-delivery')
+const { name, version } = require('../package.json')
+require("dotenv").config();
 
 const sourceTrackingHeaderName = 'X-KC-SOURCE'
 
 function getProjectId() {
-  console.log(typeof process.env.NUM_PAGES);
   switch (process.env.NUM_PAGES) {
     case "512":
       return process.env.KONTENT_PROJECT_ID_512;
@@ -40,34 +40,7 @@ function parseArticle(article) {
   }
 }
 
-export async function getAllArticlesSlugs() {
-  const articlesSlugs = await client
-    .itemsFeedAll()
-    .type('article')
-    .elementsParameter(['slug'])
-    .toPromise()
-    .then(articleResponse => articleResponse.items)
-    .then(articles => articles.map((article) => article.slug.value));
-
-  return articlesSlugs;
-}
-
-export async function getArticleBySlug(slug, preview) {
-  const article = await client
-    .items()
-    .queryConfig({
-      usePreviewMode: !!preview,
-    })
-    .type('article')
-    .equalsFilter('elements.slug', slug)
-    .toPromise()
-    .then((result) => result.getFirstItem())
-    .then(article => parseArticle(article))
-
-  return article;
-}
-
-export async function getAllArticles(preview) {
+async function getAllArticles(preview) {
   const articles = await client
     .itemsFeedAll()
     .queryConfig({
@@ -80,4 +53,9 @@ export async function getAllArticles(preview) {
     .then(articles => articles.map(article => parseArticle(article)))
 
   return articles;
+}
+
+
+module.exports = {
+  getAllArticles
 }

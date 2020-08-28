@@ -2,7 +2,6 @@ import { useRouter } from 'next/router'
 import ErrorPage from 'next/error'
 import Link from 'next/link'
 import Layout from '../../components/layout_1'
-import { getAllArticlesSlugs, getArticleBySlug } from '../../lib/api'
 
 export default function Post({ article, preview }) {
   const router = useRouter()
@@ -60,7 +59,7 @@ export default function Post({ article, preview }) {
 }
 
 export async function getStaticProps({params, preview = null}) {
-  const article = await getArticleBySlug(params.slug, preview)
+  const article = (await import('../../.artifacts/pages.json')).articles[params.slug]
 
   return {
         props: {
@@ -71,7 +70,7 @@ export async function getStaticProps({params, preview = null}) {
 }
 
 export async function getStaticPaths() {
-  const slugs = await getAllArticlesSlugs(['slug'])
+  const slugs = Object.keys((await import('../../.artifacts/pages.json')).articles);
   return {
         paths: slugs.map(
       (slug) =>

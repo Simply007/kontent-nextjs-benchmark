@@ -6,7 +6,8 @@
     "build": "next build | gnomon",
     "start": "next start",
     "export": "next export",
-    "build-export": "next build && next export",
+    "load-data" : "node scripts/load-data.js",
+    "build-export": "npm run load-data && next build && next export",
     "benchmark": "npm run build-export | gnomon",
     "benchmark-512": "cross-env NUM_PAGES=512 npm run build-export | gnomon",
     "benchmark-4096": "cross-env NUM_PAGES=4096 npm run build-export | gnomon",
@@ -25,6 +26,7 @@
   },
   "devDependencies": {
     "cross-env": "^7.0.2",
+    "dotenv": "^8.2.0",
     "gnomon": "^1.5.0",
     "postcss-preset-env": "^6.7.0"
   }

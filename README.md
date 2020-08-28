@@ -17,12 +17,12 @@ Alternation of the [Gatsby's willit.build benchmark](https://github.com/gatsbyjs
 
 See [Github action logs](https://github.com/Simply007/kontent-nextjs-benchmark/actions?query=workflow%3ABenchmark) for all results.
 
-[Results of this run](https://github.com/Simply007/kontent-nextjs-benchmark/runs/975272541?check_suite_focus=true)
+[Results of this run](https://github.com/Simply007/kontent-nextjs-benchmark/runs/1042893733?check_suite_focus=true)
 
-* 512 pages - 53s
-* 4096 pages - 278s (4.6m)
-* 8192 pages - 533s (8.8m)
-* 32768 pages - 2576s (42.9m)
+* 512 pages -  14s
+* 4096 pages - 51s
+* 8192 pages - 106s (1.76m)
+* 32768 pages - 1401s (23.35m)
 
 ### On Vercel
 
@@ -34,10 +34,11 @@ There is only 512, 4k, and 8k dataset build on [Vercel project](https://vercel.c
 Error: The result of your build (16,410 files) exceeds the maximum of 16,000 files. Learn More: https://vercel.link/max-files
 ```
 
-* 512 pages - 38s [this run](https://vercel.com/chrastinaondra/kontent-nextjs-benchmark/budqz6vg1)
-* 4096 pages - 216s (3.6m) [this run](https://vercel.com/chrastinaondra/kontent-nextjs-benchmark/q7l8n0qe8)
-* 8192 pages - 418s (6.9m) [this run](https://vercel.com/chrastinaondra/kontent-nextjs-benchmark/gud33aquq)
-* 32768 pages - 1606s (26.8m) [this run](https://vercel.com/chrastinaondra/kontent-nextjs-benchmark/2egs0cuh3)
+* 512 pages - 13s [this run](https://vercel.com/chrastinaondra/kontent-nextjs-benchmark/3ubskjn1m)
+* 4096 pages - 45s [this run](https://vercel.com/chrastinaondra/kontent-nextjs-benchmark/24r34qghz)
+* 8192 pages - 107s (1.78m) [this run](https://vercel.com/chrastinaondra/kontent-nextjs-benchmark/onsjyzknu)
+* 32768 pages - 919s (15.3,) [this run](https://vercel.com/chrastinaondra/kontent-nextjs-benchmark/lc2g9z6dt)
+  * `23:56:41.736  	 372.1988s   info  - Generating static pages (32769/32770)` it looks like 404 takes 6.2mis - so 404 could save some time
 
 ## Deploy your own
 
